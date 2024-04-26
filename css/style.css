@@ -1,0 +1,132 @@
+/* Header */
+
+.profile-info-container 
+{
+  text-align: left;
+}
+
+.profile-settings
+{
+  margin-left: 65%;
+}
+
+.fa-user-minus
+{
+  color: rgb(121, 115, 156);
+}
+
+.fa-globe
+{
+  color: #a7a5a5;
+}
+
+.fa-rss
+{
+  color: #f93;
+}
+
+/* End Header */
+/* ----------------------------------------------------------- */
+/* Nav Bar */
+
+.nav-bar
+{
+  margin-left: 9%;
+  margin-right: 8%;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid gray;
+  min-height: 42px;
+}
+
+.nav-bar 
+{
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  height: 30px;
+}
+
+/* Main Content */
+
+.problem-page 
+{
+  padding-top: 15px;
+}
+
+.a
+{
+  font-weight: 600;
+  text-decoration: none;
+  color: #6b4e3d;
+  cursor: pointer;
+}
+
+h2
+{
+  color: #6b4e3d;
+}
+
+.page-numbers
+{
+  padding-top: 20px;
+} 
+
+#archives
+{
+  background-color: #f93;
+  color: white;
+}
+
+#account
+{
+  color: #a00;
+}
+
+#page
+{
+  border: 1px solid #595454;
+  background-color: #eee;
+  width: 10px;
+  height: 10px;
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+
+#page:hover
+{
+  background-color: #999;
+}
+
+.small-notice
+{
+  font-size: small;
+}
+
+.page-item 
+{
+  padding-left: 5px;
+}
+
+.go-to
+{
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.box
+{
+  width: 75px;
+  height: 20px;
+}
+
+.cl
+{
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  background: linear-gradient(to left, transparent 68px, #f93 20px, #f93); 
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Styles for the navigation bar */
