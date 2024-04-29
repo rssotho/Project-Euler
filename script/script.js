@@ -2,11 +2,13 @@ const button_1 = document.querySelector('#button1');
 const button_2 = document.querySelector('#button2');
 const button_3 = document.querySelector('#button3');
 const checkButton = document.querySelector('.check-button');
-checkButton.addEventListener('click', checkAnswer);
 
 const description = document.querySelector('.description');
 const question = document.querySelector('.question');
 const question_number = document.querySelector('.problem-number');
+
+const answerInput = document.querySelector('.input-answer');
+let number;
 
 
 button_1.onclick = problem_1;
@@ -20,6 +22,8 @@ function problem_1()
   description.innerText = "If we list all the natural numbers below 10 that are multiples" +
   "of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.\n\n" +
   "Find the sum of all the multiples of 3 or 5 below 1000";
+
+
 }
 
 function problem_2() 
@@ -43,28 +47,65 @@ function problem_3()
   
 }
 
-function checkAnswer() 
-{
-  
-const answerInput = document.querySelector('.input-answer');
-const answer = answerInput.value;
- 
-  const correctAnswer = 42; // replace with the actual correct answer
 
-  if (answer == correctAnswer) 
-  {
-    answerInput.classList.add('correct');
-    answerInput.value = '';
-    alert('Correct!');
+function checkAnswer(number) 
+{
+   // replace with the actual correct answer
+   const answer = answerInput.value; 
+
    
+   console.log(number);
+
+  if (answer == number) 
+  {
+    alert('Correct!');
   } 
   else 
   {
-    answerInput.classList.add('incorrect');
-    answerInput.value = '';
     alert('Incorrect!');
   }
 
   // clear the input field
+
   answerInput.value = '';
 }
+
+button_1.addEventListener('click', function() 
+{
+ 
+  let totalSum = 0;
+
+  for (let i = 1; i < 1000; i++) 
+  {
+    if (i % 3 === 0 || i % 5 === 0) 
+    {
+      totalSum = totalSum + i;
+    }
+    return totalSum;
+}
+
+totalSum= number;
+});
+
+button_2.addEventListener('click', function() 
+{
+  number = 50;
+});
+
+button_3.addEventListener('click', function() 
+{
+  number = 60;
+});
+
+checkButton.addEventListener('click', function()
+{
+  checkAnswer(number);
+});
+
+
+
+$(document).ready(function() 
+{
+  $(".main-content").hide();
+
+});

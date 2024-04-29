@@ -126,6 +126,10 @@ h2
   background: linear-gradient(to left, transparent 68px, #f93 20px, #f93); 
 }
 
+.hidden-div {
+  display: none;
+}
+
 
 /* ///////////////////////////////////////////////////////////////////////////// */
 
