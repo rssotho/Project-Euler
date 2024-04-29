@@ -1,10 +1,13 @@
 const button_1 = document.querySelector('#button1');
 const button_2 = document.querySelector('#button2');
 const button_3 = document.querySelector('#button3');
+const checkButton = document.querySelector('.check-button');
+checkButton.addEventListener('click', checkAnswer);
 
 const description = document.querySelector('.description');
 const question = document.querySelector('.question');
 const question_number = document.querySelector('.problem-number');
+
 
 button_1.onclick = problem_1;
 button_2.onclick = problem_2;
@@ -38,4 +41,30 @@ function problem_3()
   description.innerText = "The prime factors of 13195 are 5, 7, 13 and 29.\n\n" +
   "What is the largest prime factor of the number 600851475143 ?";
   
+}
+
+function checkAnswer() 
+{
+  
+const answerInput = document.querySelector('.input-answer');
+const answer = answerInput.value;
+ 
+  const correctAnswer = 42; // replace with the actual correct answer
+
+  if (answer == correctAnswer) 
+  {
+    answerInput.classList.add('correct');
+    answerInput.value = '';
+    alert('Correct!');
+   
+  } 
+  else 
+  {
+    answerInput.classList.add('incorrect');
+    answerInput.value = '';
+    alert('Incorrect!');
+  }
+
+  // clear the input field
+  answerInput.value = '';
 }
