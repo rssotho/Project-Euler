@@ -58,11 +58,11 @@ function checkAnswer(number)
 
   if (answer == number) 
   {
-    alert('Correct!');
+    swal("Good job!", "Congratulation!", "success");
   } 
   else 
   {
-    alert('Incorrect!');
+    swal("Incorrect!", "Wrong Answer!", "error");
   }
 
   // clear the input field
@@ -81,10 +81,11 @@ button_1.addEventListener('click', function()
     {
       totalSum = totalSum + i;
     }
-    return totalSum;
+    
+
 }
 
-totalSum= number;
+  number = totalSum;
 });
 
 button_2.addEventListener('click', function() 
