@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Euler</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -13,19 +12,21 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="icon" type="image/png" href="../img/p.png">
+    <title>Project Euler</title>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header class="container-fluid p-0">
+    <!-- Header Start -->
+
+    <header class="p-0">
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-10">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="profile-picture">
                         <img src="../img/logo2.png" alt="Profile Picture">
                     </div>
-                    <div class="profile-info-container">
+                    <div class="profile-info">
                         <div class="profile-info">
                             <div class="profile">Logged in as <strong>Rivoningo</strong></div>
                             <div class="profile-date">Mon, 22 Apr 2020, 09:23</div>
@@ -42,12 +43,15 @@
         </div>
     </header>
 
+    <!-- Header End -->
 
-    <!-- nav bar -->
+    <!-- ------------------------------------------------------------------------------------------------ -->
+
+    <!-- Nav Bar Start -->
 
     <nav class="navbar navbar-expand-lg navbar-light nav-bar justify-content-center nav-bar"
         style="background-color: #eee;">
-        <div class="container-fluid">
+        <div class="col">
             <div class="row col-md-6">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -82,12 +86,15 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </nav>
 
-    <!-- Main -->
+    <!-- Nav Bar End -->
+
+    <!-- ----------------------------------------------------------------------------------------------- -->
+
+    <!-- Main Start -->
 
     <main class="container-fluid p-0">
         <div class="row justify-content-center">
@@ -111,15 +118,19 @@
                 <br>
                 <div class="small-notice">
                     View the details of <a href="#" class="a">Problems 1 to 50</a> on one page.
-                </div> <br>
+                </div>
+                <br>
                 <button class="btn btn-outline-secondary border-dark text-dark">
-                    <a class="btn" href="../html/questions.html"> Questions</a>
+                    <a class="btn" href="../html/questions.html">Questions</a>
                 </button>
                 <br>
 
-                <!-- Table -->
+                <!-- Content End -->
+
+                <!-- Table Start -->
+
                 <br>
-                 <table class="table table-bordered">
+                <table class="table table-bordered">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
@@ -135,7 +146,6 @@
                             <td><a href="#" class="title-link">Multiples of 3 or 5</a></td>
                             <td>995362</td>
                             <td><input class="page-item box cl" disabled></td>
-                            </td>
                         </tr>
 
                         <tr>
@@ -253,22 +263,35 @@
                             <td><input class="page-item box cl" disabled></td>
                         </tr>
                     </tbody>
-                </table> 
+                </table>
             </div>
-
-
-
-
-
         </div>
     </main>
+
+    <!-- Main End -->
+
+    <!-- ------------------------------------------------------------------------------------------------- -->
+
+    <!-- Footer Start-->
+
+    <footer class="row">
+        <div class="col-md-10 col-lg-10">
+        <p class="foot">
+            Project Euler: <a style="color: #6b4e3d;" href="#">Copyright Information</a> | <a style="color: #6b4e3d;" href="#">Privacy Policy</a>
+        </p>
+        </div>
+    </footer>
+
+    <!-- Footer End -->
+    
 </body>
 
 <!-- Scripts -->
 
-<script src="../script/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous">
+</script>
+<script src="../script/script.js"></script>
 
 </html>

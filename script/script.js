@@ -6,9 +6,12 @@ const checkButton = document.querySelector('.check-button');
 const description = document.querySelector('.description');
 const question = document.querySelector('.question');
 const question_number = document.querySelector('.problem-number');
-
 const answerInput = document.querySelector('.input-answer');
+
 let number;
+
+const hide = document.querySelector('.answer');
+const hideMain = document.querySelector('.main-content');
 
 
 button_1.onclick = problem_1;
@@ -23,7 +26,8 @@ function problem_1()
   "of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.\n\n" +
   "Find the sum of all the multiples of 3 or 5 below 1000";
 
-
+  hideMain.classList.remove('d-none');
+  hide.classList.remove('d-none');
 }
 
 function problem_2() 
@@ -36,6 +40,8 @@ function problem_2()
   "By considering the terms in the Fibonacci sequence whose values do not exceed four million," +
   " find the sum of the even-valued terms.";
   
+  hideMain.classList.remove('d-none');
+  hide.classList.remove('d-none');
 }
 
 function problem_3() 
@@ -44,17 +50,15 @@ function problem_3()
   question_number.innerText = "Problem 3";
   description.innerText = "The prime factors of 13195 are 5, 7, 13 and 29.\n\n" +
   "What is the largest prime factor of the number 600851475143 ?";
-  
+
+  hideMain.classList.remove('d-none');
+  hide.classList.remove('d-none');  
 }
 
 
 function checkAnswer(number) 
 {
-   // replace with the actual correct answer
    const answer = answerInput.value; 
-
-   
-   console.log(number);
 
   if (answer == number) 
   {
@@ -81,7 +85,7 @@ button_1.addEventListener('click', function()
       totalSum = totalSum + i;
     }
   }
-  
+
   // 233168
   number = totalSum;
 });

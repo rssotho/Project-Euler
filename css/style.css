@@ -1,6 +1,6 @@
 /* Header */
 
-.profile-info-container 
+.profile-info 
 {
   text-align: left;
 }
@@ -60,7 +60,22 @@
   cursor: pointer;
 }
 
+.a:hover
+{
+  color: #6b4e3d;
+}
+
 h2
+{
+  color: #6b4e3d;
+}
+
+.title-link
+{
+  color: #6b4e3d;
+}
+
+.title-link:hover
 {
   color: #6b4e3d;
 }
@@ -173,11 +188,8 @@ h2
   margin-left: 33%;
 }
 
-#new-info {
-  display: none; /* Hide the new information by default */
-}
-
-/* When the anchor link is clicked, display the new information */
-#show-info:target + #new-info {
-  display: block;
+.foot
+{
+  margin-top: 10%;
+  padding-left: 40%;
 }
