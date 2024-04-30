@@ -72,7 +72,6 @@ function checkAnswer(number)
 
 button_1.addEventListener('click', function() 
 {
- 
   let totalSum = 0;
 
   for (let i = 1; i < 1000; i++) 
@@ -81,21 +80,55 @@ button_1.addEventListener('click', function()
     {
       totalSum = totalSum + i;
     }
-    
-
-}
-
+  }
+  
+  // 233168
   number = totalSum;
 });
 
-button_2.addEventListener('click', function() 
-{
-  number = 50;
+
+button_2.addEventListener('click', function() {
+  var sum = 0;
+  var a = 1;
+  var b = 2;
+  var temp;
+
+  while (a <= 4000000) 
+  {
+    if (a % 2 === 0) 
+    {
+        sum += a;
+    }
+      temp = a;
+      a = b;
+      b = temp + b;
+  }
+
+  // 4613732
+  number = sum;
 });
 
 button_3.addEventListener('click', function() 
 {
-  number = 60;
+  var primeFactor = 600851475143;
+  var largestPrimeFactor = 0;
+  var i = 2;
+
+  while (primeFactor !== 1) 
+  {
+    if (primeFactor % i === 0) 
+    {
+      largestPrimeFactor = i;
+      primeFactor /= i;
+    } 
+    else 
+    {
+      i++;
+    }
+  }
+
+  // 6857
+  number = largestPrimeFactor;
 });
 
 checkButton.addEventListener('click', function()
