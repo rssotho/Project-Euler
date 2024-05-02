@@ -62,11 +62,13 @@ function checkAnswer(number)
 
   if (answer == number) 
   {
-    swal("Good job!", "Congratulation!", "success");
+    // swal("Good job!", "Congratulation!", "success");
+    Swal.fire("Good job!", "Congratulations!", "success");
   } 
   else 
   {
-    swal("Incorrect!", "Wrong Answer!", "error");
+    // swal("Incorrect!", "Wrong Answer!", "error");
+    Swal.fire("Oops!", "That's the wrong answer.", "error");
   }
 
   // clear the input field
@@ -86,10 +88,10 @@ button_1.addEventListener('click', function()
     }
   }
 
+
   // 233168
   number = totalSum;
 });
-
 
 button_2.addEventListener('click', function() {
   var sum = 0;
@@ -140,10 +142,3 @@ checkButton.addEventListener('click', function()
   checkAnswer(number);
 });
 
-
-
-$(document).ready(function() 
-{
-  $(".main-content").hide();
-
-});

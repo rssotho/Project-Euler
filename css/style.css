@@ -181,21 +181,33 @@ h2
 
 #number
 {
-  margin-top: auto;
-  margin-left: auto;
-  width: 86%;
+  margin-top: 0;
+  width: 75%;
   height: 100%;
 }
-
-.chek
-{
-  margin-top: 1%;
-  margin-left: 40%;
-}
-
 
 .foot
 {
   margin-top: 10%;
   padding-left: 40%;
+}
+
+
+.card 
+{
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.card .btn 
+{
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 1%;
+  margin-left: 45%;
 }
