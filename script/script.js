@@ -7,12 +7,15 @@ const description = document.querySelector('.description');
 const question = document.querySelector('.question');
 const question_number = document.querySelector('.problem-number');
 const answerInput = document.querySelector('.input-answer');
+const card = document.querySelector('#cards');
 
 let number;
 
 const hide = document.querySelector('.answer');
 const hideMain = document.querySelector('.main-content');
+const card2 = document.querySelector('.replacer');
 
+card2.style.display = 'none';
 
 button_1.onclick = problem_1;
 button_2.onclick = problem_2;
@@ -28,6 +31,7 @@ function problem_1()
 
   hideMain.classList.remove('d-none');
   hide.classList.remove('d-none');
+  card2.style.display = 'none';
 }
 
 function problem_2() 
@@ -42,6 +46,7 @@ function problem_2()
 
   hideMain.classList.remove('d-none');
   hide.classList.remove('d-none');
+  card2.style.display = 'none';
 }
 
 function problem_3() 
@@ -53,6 +58,7 @@ function problem_3()
 
   hideMain.classList.remove('d-none');
   hide.classList.remove('d-none');  
+  card2.style.display = 'none';
 }
 
 
@@ -64,11 +70,14 @@ function checkAnswer(number)
   {
     // swal("Good job!", "Congratulation!", "success");
     Swal.fire("Good job!", "Congratulations!", "success");
+    hide.classList.add('d-none');
+    card2.style.display = 'block';
+    card.innerHTML = number;
   } 
   else 
   {
     // swal("Incorrect!", "Wrong Answer!", "error");
-    Swal.fire("Oops!", "That's the wrong answer.", "error");
+    Swal.fire("Oops!", "That's the wrong answer. Try Again", "error");
   }
 
   // clear the input field
@@ -91,6 +100,7 @@ button_1.addEventListener('click', function()
 
   // 233168
   number = totalSum;
+
 });
 
 button_2.addEventListener('click', function() {
@@ -141,4 +151,3 @@ checkButton.addEventListener('click', function()
 {
   checkAnswer(number);
 });
-

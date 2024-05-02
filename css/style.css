@@ -141,7 +141,8 @@ h2
   background: linear-gradient(to left, transparent 68px, #f93 20px, #f93); 
 }
 
-.hidden-div {
+.hidden-div 
+{
   display: none;
 }
 
@@ -210,4 +211,15 @@ h2
   border-radius: 5px;
   margin-top: 1%;
   margin-left: 45%;
+}
+
+.replacer
+{
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-left: 30%;
 }
