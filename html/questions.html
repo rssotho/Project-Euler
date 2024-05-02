@@ -19,25 +19,19 @@
 
     <!-- Header Start -->
 
-    <header class="p-0">
-        <div class="row justify-content-center">
-            <div class="col-md-10 col-lg-10">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="profile-picture">
-                        <img src="../img/logo2.png" alt="Profile Picture">
-                    </div>
-                    <div class="profile-info">
-                        <div class="profile-info">
-                            <div class="profile">Logged in as <strong>Rivoningo</strong></div>
-                            <div class="profile-date">Mon, 22 Apr 2020, 09:23</div>
-                        </div>
-                        <!-- Icons -->
-                        <div class="profile-settings">
-                            <i class="fa-solid fa-user-minus"></i>
-                            <i class="fa-solid fa-globe"></i>
-                            <i class="fa-solid fa-rss"></i>
-                        </div>
-                    </div>
+    <header class="justify-content-center">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="profile-picture">
+                <img class="img-fluid img-responsive" src="../img/logo2.png" alt="Profile Picture">
+            </div>
+            <div class="profile-info">
+                <div class="profile-info">
+                    <div class="profile">Logged in as <strong>Rivoningo</strong></div>
+                    <div class="profile-date">Mon, 22 Apr 2020, 09:23</div>
+                    <!-- Icons -->
+                    <i class="fa-solid fa-user-minus"></i>
+                    <i class="fa-solid fa-globe"></i>
+                    <i class="fa-solid fa-rss"></i>
                 </div>
             </div>
         </div>
@@ -45,20 +39,17 @@
 
     <!-- End Header -->
 
-    <!-- ----------------------------------------------------- -->
+    <!-- ------------------------------------------------------------------------------ -->
 
     <!-- Nav Bar Start -->
 
-    <nav class="navbar navbar-expand-lg navbar-light nav-bar justify-content-center nav-bar"
-        style="background-color: #eee;">
+    <nav class="navbar navbar-expand-md navbar-light bg-light nav-bar">
         <div class="col">
             <div class="row col-md-6">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" href="#">About</a>
@@ -93,7 +84,7 @@
 
     <!-- Nav Bar End -->
 
-    <!-- ------------------------------------------------------- -->
+    <!-- ---------------------------------------------------------------------------- -->
 
     <!-- Main Content Start -->
 
@@ -104,25 +95,30 @@
 
                     <!-- Page Numbers Replaced with Nav Bar-->
 
-                    <nav class="navbar-light">
-                        <button class="btn btn-outline-secondary border-dark text-dark" id="button1">Problem
+                    <nav class="navbar-light navbar-expand-md">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarText">
+                        <button class="btn btn-outline-secondary border-dark text-dark tp" id="button1">Problem
                             1</button>
-                        <button class="btn btn-outline-secondary border-dark text-dark" id="button2">Problem
+                        <button class="btn btn-outline-secondary border-dark text-dark tp" id="button2">Problem
                             2</button>
-                        <button class="btn btn-outline-secondary border-dark text-dark" id="button3">Problem
+                        <button class="btn btn-outline-secondary border-dark text-dark tp" id="button3">Problem
                             3</button>
-                        <button class="btn btn-outline-secondary border-dark text-dark" id="button4">Problem
+                        <button class="btn btn-outline-secondary border-dark text-dark tp" id="button4">Problem
                             4</button>
-                        <button class="btn btn-outline-secondary border-dark text-dark" id="button5">Problem
+                        <button class="btn btn-outline-secondary border-dark text-dark tp" id="button5">Problem
                             5</button>
-                        <button class="btn btn-outline-secondary border-dark text-dark" id="button6">Problem
+                        <button class="btn btn-outline-secondary border-dark text-dark tp" id="button6">Problem
                             6</button>
-                        <button class="btn btn-outline-secondary border-dark text-dark" id="button7">Problem
+                        <button class="btn btn-outline-secondary border-dark text-dark tp" id="button7">Problem
                             7</button>
-                        <button class="btn btn-outline-secondary border-dark text-dark" id="button8">Problem
+                        <button class="btn btn-outline-secondary border-dark text-dark tp" id="button8">Problem
                             8</button>
-                        <button class="btn btn-outline-secondary border-dark text-dark" id="button9">Problem
+                        <button class="btn btn-outline-secondary border-dark text-dark tp" id="button9">Problem
                             9</button>
+                            </div>
                     </nav>
                     <br>
                     <div class="header-question">
@@ -152,6 +148,7 @@
 
     <!-- Main Content End -->
 
+    <!-- ---------------------------------------------------------------------------------- -->
     <footer class="row">
         <div class="col-md-10 col-lg-10">
             <p class="foot">
@@ -162,6 +159,8 @@
     </footer>
 
     <!-- Footer End -->
+
+    <!-- ---------------------------------------------------------------------------- -->
 </body>
 
 <script src="../script/script.js"></script>
