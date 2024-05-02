@@ -227,3 +227,26 @@ h2
   background-color: #fff;
   margin: auto;
 }
+
+.paper {
+  position: absolute;
+  width: 20px; /* Adjust paper width */
+  height: 20px; /* Adjust paper height */
+  border-radius: 10px; /* Adjust paper border radius */
+  animation-fill-mode: forwards;
+}
+
+@keyframes paperAnimation {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+

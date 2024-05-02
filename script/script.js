@@ -73,6 +73,13 @@ function checkAnswer(number)
     hide.classList.add('d-none');
     card2.style.display = 'block';
     card.innerHTML = number;
+
+     // Create and position balloons
+
+    for (let i = 1; i <= 20; i++) 
+    { // Adjust the number of streamers as needed
+      createPaper();
+    }
   } 
   else 
   {
@@ -151,3 +158,34 @@ checkButton.addEventListener('click', function()
 {
   checkAnswer(number);
 });
+
+
+function createPaper() {
+  const paper = document.createElement('div');
+  paper.classList.add('paper');
+
+  // Define an array of colors
+  const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff']; // Add more colors as needed
+
+  // Randomly select a color
+  const randomColorIndex = Math.floor(Math.random() * colors.length);
+  const color = colors[randomColorIndex];
+  paper.style.backgroundColor = color;
+
+  // Randomly position paper
+  const screenWidth = window.innerWidth;
+  const randomLeft = Math.floor(Math.random() * screenWidth);
+  paper.style.left = randomLeft + 'px';
+
+  document.body.appendChild(paper);
+
+  // Animate paper
+  const animationDuration = Math.random() * 5 + 3; // Random duration between 2s and 5s
+  paper.style.animation = `paperAnimation ${animationDuration}s linear`;
+
+  // Remove paper after animation ends
+  paper.addEventListener('animationend', () => 
+  {
+    paper.remove();
+  });
+}
