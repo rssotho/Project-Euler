@@ -160,12 +160,13 @@ checkButton.addEventListener('click', function()
 });
 
 
-function createPaper() {
+function createPaper() 
+{
   const paper = document.createElement('div');
   paper.classList.add('paper');
 
   // Define an array of colors
-  const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff']; // Add more colors as needed
+  const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
 
   // Randomly select a color
   const randomColorIndex = Math.floor(Math.random() * colors.length);
@@ -180,7 +181,7 @@ function createPaper() {
   document.body.appendChild(paper);
 
   // Animate paper
-  const animationDuration = Math.random() * 5 + 3; // Random duration between 2s and 5s
+  const animationDuration = Math.random() * 5 + 3; 
   paper.style.animation = `paperAnimation ${animationDuration}s linear`;
 
   // Remove paper after animation ends

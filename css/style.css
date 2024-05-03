@@ -228,15 +228,17 @@ h2
   margin: auto;
 }
 
-.paper {
+.paper 
+{
   position: absolute;
-  width: 20px; /* Adjust paper width */
-  height: 20px; /* Adjust paper height */
-  border-radius: 10px; /* Adjust paper border radius */
+  width: 20px; 
+  height: 20px; 
+  border-radius: 10px; 
   animation-fill-mode: forwards;
 }
 
-@keyframes paperAnimation {
+@keyframes paperAnimation
+ {
   0% {
     top: 0;
     opacity: 1;
