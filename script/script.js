@@ -9,8 +9,11 @@ const checkButton3 = document.querySelector('#s3');
 const description = document.querySelector('.description');
 const question = document.querySelector('.question');
 const question_number = document.querySelector('.problem-number');
-const answerInput = document.querySelector('.input-answer');
 const card = document.querySelector('#cards');
+
+const answerInput = document.querySelector('.input-answer');
+const answerInput2 = document.querySelector('.input-answer2');
+const answerInput3 = document.querySelector('.input-answer3');
 
 let number;
 
@@ -81,30 +84,28 @@ checkButton.addEventListener('click', function()
 {
   let totalSum = 0;
   let answer = answerInput.value; 
-
+  let answer2 = answerInput2.value;
+  let answer3 = answerInput3.value;
+  
   for (let i = 1; i < answer; i++) 
   {
-    if (i % 3 === 0 || i % 5 === 0) 
+    if (i % answer2 === 0 || i % answer3 === 0) 
     {
       totalSum = totalSum + i;
-      if (answer != '')
-        {
-          Swal.fire("Good job!", "Congratulations!", "success");
-          hide.classList.add('d-none');
-          card2.style.display = 'block';
-          card.innerHTML = totalSum;
-        }
-        else
-        {
-          Swal.fire("Oops!", "That's the wrong answer. Try Again", "error");
-        }
     }
   }
-   answer = '';
- 
 
-  // 233168
-
+  if (answer != '')
+    {
+      Swal.fire("Good job!", "Congratulations!", "success");
+      hide.classList.add('d-none');
+      card2.style.display = 'block';
+      card.innerHTML = totalSum;
+    }
+    else
+    {
+      Swal.fire("Oops!", "That's the wrong answer. Try Again", "error");
+    }
 });
 
 checkButton2.addEventListener('click', function() {
