@@ -1,7 +1,10 @@
 const button_1 = document.querySelector('#button1');
 const button_2 = document.querySelector('#button2');
 const button_3 = document.querySelector('#button3');
-const checkButton = document.querySelector('.check-button');
+
+const checkButton = document.querySelector('#s');
+const checkButton2 = document.querySelector('#s2');
+const checkButton3 = document.querySelector('#s3');
 
 const description = document.querySelector('.description');
 const question = document.querySelector('.question');
@@ -32,6 +35,10 @@ function problem_1()
   hideMain.classList.remove('d-none');
   hide.classList.remove('d-none');
   card2.style.display = 'none';
+
+  $('#s2').hide();
+  $('#s3').hide();
+  $('#s').show();
 }
 
 function problem_2() 
@@ -47,6 +54,10 @@ function problem_2()
   hideMain.classList.remove('d-none');
   hide.classList.remove('d-none');
   card2.style.display = 'none';
+
+  $('#s').hide();
+  $('#s3').hide();
+  $('#s2').show();
 }
 
 function problem_3() 
@@ -59,104 +70,112 @@ function problem_3()
   hideMain.classList.remove('d-none');
   hide.classList.remove('d-none');  
   card2.style.display = 'none';
+
+  
+  $('#s3').show();
+  $('#s2').hide();
+  $('#s').hide();
 }
 
-
-function checkAnswer(number) 
-{
-   const answer = answerInput.value; 
-
-  if (answer == number) 
-  {
-    // swal("Good job!", "Congratulation!", "success");
-    Swal.fire("Good job!", "Congratulations!", "success");
-    hide.classList.add('d-none');
-    card2.style.display = 'block';
-    card.innerHTML = number;
-
-     // Create and position balloons
-
-    for (let i = 1; i <= 20; i++) 
-    { // Adjust the number of streamers as needed
-      createPaper();
-    }
-  } 
-  else 
-  {
-    // swal("Incorrect!", "Wrong Answer!", "error");
-    Swal.fire("Oops!", "That's the wrong answer. Try Again", "error");
-  }
-
-  // clear the input field
-
-  answerInput.value = '';
-}
-
-button_1.addEventListener('click', function() 
+checkButton.addEventListener('click', function() 
 {
   let totalSum = 0;
+  let answer = answerInput.value; 
 
-  for (let i = 1; i < 1000; i++) 
+  for (let i = 1; i < answer; i++) 
   {
     if (i % 3 === 0 || i % 5 === 0) 
     {
       totalSum = totalSum + i;
+      if (answer != '')
+        {
+          Swal.fire("Good job!", "Congratulations!", "success");
+          hide.classList.add('d-none');
+          card2.style.display = 'block';
+          card.innerHTML = totalSum;
+        }
+        else
+        {
+          Swal.fire("Oops!", "That's the wrong answer. Try Again", "error");
+        }
     }
   }
-
+   answer = '';
+ 
 
   // 233168
-  number = totalSum;
 
 });
 
-button_2.addEventListener('click', function() {
+checkButton2.addEventListener('click', function() {
   var sum = 0;
   var a = 1;
   var b = 2;
   var temp;
 
-  while (a <= 4000000) 
+  let answer = answerInput.value;
+
+  while (b < answer) 
   {
-    if (a % 2 === 0) 
+    if (b % 2 === 0) 
     {
-        sum += a;
+        sum += b;
     }
-      temp = a;
+      temp = a + b;
       a = b;
-      b = temp + b;
+      b = temp;
   }
 
   // 4613732
-  number = sum;
+  if (answer != '')
+    {
+      Swal.fire("Good job!", "Congratulations!", "success");
+      hide.classList.add('d-none');
+      card2.style.display = 'block';
+      card.innerHTML = sum;
+
+      console.log(sum);
+    }
+    else
+    {
+      Swal.fire("Oops!", "That's the wrong answer. Try Again", "error");
+    }
 });
 
-button_3.addEventListener('click', function() 
+checkButton3.addEventListener('click', function() 
 {
-  var primeFactor = 600851475143;
   var largestPrimeFactor = 0;
   var i = 2;
+  let answer = answerInput.value;
 
-  while (primeFactor !== 1) 
+  while (i <= answer) 
   {
-    if (primeFactor % i === 0) 
+    if (answer % i === 0) 
     {
       largestPrimeFactor = i;
-      primeFactor /= i;
+      answer /= i;
     } 
     else 
     {
       i++;
     }
   }
-
-  // 6857
+  console.log("Q3");
   number = largestPrimeFactor;
-});
 
-checkButton.addEventListener('click', function()
-{
-  checkAnswer(number);
+  if (answer != '')
+    {
+      Swal.fire("Good job!", "Congratulations!", "success");
+      hide.classList.add('d-none');
+      card2.style.display = 'block';
+      card.innerHTML = number;
+      console.log(number);
+    }
+    else
+    {
+      Swal.fire("Oops!", "That's the wrong answer. Try Again", "error");
+    }
+
 });
 
 
