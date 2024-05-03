@@ -15,6 +15,9 @@ const answerInput = document.querySelector('.input-answer');
 const answerInput2 = document.querySelector('.input-answer2');
 const answerInput3 = document.querySelector('.input-answer3');
 
+const p1 = document.querySelector('.p1');
+const p2 = document.querySelector('.p2');
+
 let number;
 
 const hide = document.querySelector('.answer');
@@ -42,6 +45,8 @@ function problem_1()
   $('#s2').hide();
   $('#s3').hide();
   $('#s').show();
+  $('.p2').show();
+  $('.p1').show();
 }
 
 function problem_2() 
@@ -61,6 +66,8 @@ function problem_2()
   $('#s').hide();
   $('#s3').hide();
   $('#s2').show();
+  $('.p2').show();
+  $('.p1').show();
 }
 
 function problem_3() 
@@ -78,6 +85,8 @@ function problem_3()
   $('#s3').show();
   $('#s2').hide();
   $('#s').hide();
+  $('.p1').hide();
+  $('.p2').hide();
 }
 
 checkButton.addEventListener('click', function() 
@@ -108,24 +117,29 @@ checkButton.addEventListener('click', function()
     }
 });
 
-checkButton2.addEventListener('click', function() {
-  var sum = 0;
-  var a = 1;
-  var b = 2;
-  var temp;
+checkButton2.addEventListener('click', function() 
+{
+  let sum = 0;
+  let temp;
 
-  let answer = answerInput.value;
+  let answer = parseInt(answerInput.value);
+  let answer2 = parseInt(answerInput2.value); 
+  let answer3 = parseInt(answerInput3.value); 
 
-  while (b < answer) 
+  while (answer3 < answer) 
   {
-    if (b % 2 === 0) 
+    if (answer3 % 2 === 0) 
     {
-        sum += b;
+        sum += answer3;
     }
-      temp = a + b;
-      a = b;
-      b = temp;
+      temp = answer2 + answer3;
+      answer2 = answer3;
+      answer3 = temp;
   }
+
+  console.log(answer);
+  console.log(answer2);
+  console.log(answer3);
 
   // 4613732
   if (answer != '')
@@ -134,8 +148,6 @@ checkButton2.addEventListener('click', function() {
       hide.classList.add('d-none');
       card2.style.display = 'block';
       card.innerHTML = sum;
-
-      console.log(sum);
     }
     else
     {
@@ -170,7 +182,6 @@ checkButton3.addEventListener('click', function()
       hide.classList.add('d-none');
       card2.style.display = 'block';
       card.innerHTML = number;
-      console.log(number);
     }
     else
     {
@@ -178,35 +189,3 @@ checkButton3.addEventListener('click', function()
     }
 
 });
-
-
-function createPaper() 
-{
-  const paper = document.createElement('div');
-  paper.classList.add('paper');
-
-  // Define an array of colors
-  const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
-
-  // Randomly select a color
-  const randomColorIndex = Math.floor(Math.random() * colors.length);
-  const color = colors[randomColorIndex];
-  paper.style.backgroundColor = color;
-
-  // Randomly position paper
-  const screenWidth = window.innerWidth;
-  const randomLeft = Math.floor(Math.random() * screenWidth);
-  paper.style.left = randomLeft + 'px';
-
-  document.body.appendChild(paper);
-
-  // Animate paper
-  const animationDuration = Math.random() * 5 + 3; 
-  paper.style.animation = `paperAnimation ${animationDuration}s linear`;
-
-  // Remove paper after animation ends
-  paper.addEventListener('animationend', () => 
-  {
-    paper.remove();
-  });
-}
