@@ -72,10 +72,11 @@ function problem_2()
 
 function problem_3() 
 {
+  
   question.innerHTML = "<b>Largest Prime Factor</b>";
   question_number.innerHTML = "<b>Problem 3</b>";
   description.innerHTML = "The prime factors of <b>13195</b> are <b>5, 7, 13</b> and <b>29</b>.<br><br>" +
-  "What is the largest prime factor of the number <b>600851475143</b>?";
+  "What is the largest prime factor of the number" + "<b>600851475143</b>?";
 
   hideMain.classList.remove('d-none');
   hide.classList.remove('d-none');  
@@ -106,7 +107,7 @@ checkButton.addEventListener('click', function()
 
   if (answer != '')
     {
-      Swal.fire("Good job!", "Congratulations!", "success");
+      Swal.fire("Completed", "", "success");
       hide.classList.add('d-none');
       card2.style.display = 'block';
       card.innerHTML = totalSum;
@@ -144,7 +145,7 @@ checkButton2.addEventListener('click', function()
   // 4613732
   if (answer != '')
     {
-      Swal.fire("Good job!", "Congratulations!", "success");
+      Swal.fire("Completed", "", "success");
       hide.classList.add('d-none');
       card2.style.display = 'block';
       card.innerHTML = sum;
@@ -178,7 +179,7 @@ checkButton3.addEventListener('click', function()
 
   if (answer != '')
     {
-      Swal.fire("Good job!", "Congratulations!", "success");
+      Swal.fire("Completed", "", "success");
       hide.classList.add('d-none');
       card2.style.display = 'block';
       card.innerHTML = number;
